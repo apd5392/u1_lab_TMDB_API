@@ -37,3 +37,6 @@ button:hover {
   padding: 10px;
   margin: 10px;
 }
+.movie-list{
+  border-style: dashed;
+}
