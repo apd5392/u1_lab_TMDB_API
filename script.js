@@ -12,14 +12,12 @@ button.addEventListener("click", async () => {
       `https://api.themoviedb.org/3/search/movie?query=${movie}&api_key=${API_KEY}`
     )
     .then((result) => result.data.results); // arrow fucntion will return automatically. If in curly brace will need to do a return
-  console.log("Log is showing"); // Shows "Log is showing" in the console
-  console.log(response); // Shows the response
-
-  let movieList = document.createElement("div");
-  movieList.innerHTML = `<img src = ${IMAGE_BASE_PATH}${response[0].backdrop_path}>`;
-  list.append(movieList);
-  for (let i = 0; i < list.length; i++) {
-    console.log("Hi " + response);
+  for (let i = 0; i < response.length; i++) {
+    console.log("Log is showing"); // Shows "Log is showing" in the console
+    console.log(response); // Shows the response
+    let movieList = document.createElement("div");
+    movieList.innerHTML = `<img src = ${IMAGE_BASE_PATH}${response[0].backdrop_path}>`;
+    list.append(movieList);
   }
 });
 
